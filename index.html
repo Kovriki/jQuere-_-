@@ -6,35 +6,71 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <style media="screen">
+.name_box{
+  width: 50vw;
+  height: 10vw;
+  background-color: black;
+  color: whyte;
+  display: inline-grid;
+  position: relative;
+}
+.name_box{
+  width: 50vw;
+  height: 10vw;
+  background-color: black;
+  color: whyte;
+  display: inline-grid;
+  position: relative;
+}
 .quater{
-  width: 100px;
-  height: 100px;
-  border-radius: 100px 0 0 0;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 20vw 0 0 0;
   background-color: black;
   display: inline-grid;
   position: relative;
 }
+.grid{
+  width: 100vw;
+  height: 100vh;
+  background-color: blue;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 10vw 10vw 10vw 10vw;
+}
 .box {
-  width: 100%;
-  height: 100%;
+  width: 50vw;
+  height: 50vw;
   background-color: orange;
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+  grid-template-rows: 10vw 10vw 10vw 10vw;
 }
 .box_1{
-  width: 100px;
-  height: 100px;
+  width: 10vw;
+  height: 10vw;
   background-color: yellow;
   display: grid;
-  grid-template-columns: 50px 50px;
-  grid-template-rows: 50px 50px;
+  grid-template-columns: 5vw 5vw;
+  grid-template-rows: 5vw 5vw;
+}
+.box_2{
+  width: 40vw;
+  height: 40vw;
+  background-color: yellow;
+  display: grid;
+  grid-template-columns: 20vw 20vw;
+  grid-template-rows: 20vw 20vw;
 }
 .small {
-  width: 50px;
-  height: 50px;
+  width: 5vw;
+  height: 5vw;
   display: inline-grid;
   position: relative;
+}
+.big{
+  width: 20vw;
+  height: 20vw;
 }
 
 </style>
@@ -50,21 +86,66 @@ $(".quater").click(function(){rotate = rotate + 90;
 </script>
   </head>
   <body>
-    <div class="box">
-    <div class="quater"></div>
-    <div class="quater"></div>
-    <div class="quater"></div>
-    <div class="quater"></div>
-    <div class="quater"></div>
+    <div class="grid">
+      <div class="box">
+        <!-- <div class="name_box">текст</div> -->
+        <div class="box_1">
+        <div class="quater small "></div>
+        <div class="quater small "></div>
+        <div class="quater small "></div>
+        <div class="quater small "></div>
+        </div>
+        <div class="quater"></div>
+        <div class="quater"></div>
+        <div class="box_1">
+        <div class="quater small "></div>
+        <div class="quater small "></div>
+        <div class="quater small "></div>
+        <div class="quater small "></div>
+        </div>
+        <div class="quater"></div>
+        <div class="quater"></div>
+        <div class="box_1">
+        <div class="quater small "></div>
+        <div class="quater small "></div>
+        <div class="quater small "></div>
+        <div class="quater small "></div>
+        </div>
+        <div class="quater"></div>
+        <div class="quater"></div>
+</div>
+      <div class="box">
+      <div class="quater"></div>
+      <div class="quater"></div>
+      <div class="quater"></div>
+      <div class="quater"></div>
+      <div class="quater"></div>
 
-    <div class="box_1">
-    <div class="quater small "></div>
-    <div class="quater small "></div>
-    <div class="quater small "></div>
-    <div class="quater small "></div>
+      <div class="box_1">
+      <div class="quater small "></div>
+      <div class="quater small "></div>
+      <div class="quater small "></div>
+      <div class="quater small "></div>
+      </div>
+      <div class="quater"></div>
+      <div class="quater"></div>
+      <div class="box_1">
+      <div class="quater small "></div>
+      <div class="quater small "></div>
+      <div class="quater small "></div>
+      <div class="quater small "></div>
+      </div>
+      <div class="quater"></div>
+      <div class="quater"></div>
+
+      <div class="box_2">
+      <div class="quater big "></div>
+      <div class="quater big "></div>
+      <div class="quater big "></div>
+      <div class="quater big "></div>
+      </div>
+      </div>
     </div>
-    <div class="quater"></div>
-    <div class="quater"></div>
-    </div>
+
   </body>
 </html>
