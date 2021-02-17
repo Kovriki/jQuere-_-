@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style media="screen">
+      .btn{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+      }
+      .sect {
+        width: 50%;
+        height: 50%;
+        background-color: orange;
+      }
+      .blocker{
+        display: none;
+      }
+      .hidden{
+        transition: .2s;
+        opacity: 0;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".btn").click(function(){
+          $(".sect").addClass("hidden")
+          setTimeout(function(){
+            $(".sect").addClass("blocker");
+          }, 300);
+        });
+      })
+    </script>
+  </head>
+  <body>
+      <section class="sect">
+        <div class="btn"></div>
+      </section>
+  </body>
+</html>
