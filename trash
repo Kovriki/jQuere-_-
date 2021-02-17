@@ -17,3 +17,23 @@ $(document).ready(function(){
     });
   });
 </script> -->
+
+
+
+$(document).ready(function(){
+    $(".orange, .blue").click(function(){
+      $(".blue.hidden").removeClass("blocker");
+      setTimeout(function(){
+        $(".blue").toggleClass("hidden");
+      }, 1);
+      setTimeout(function(){
+        $(".blue.hidden").addClass("blocker");
+      }, 300);
+    });
+    $(".red").click(function () {
+      if ($(".red").hasClass("rounder")) {
+        $(".orange").toggleClass("hidden");
+      }
+      $(this).toggleClass("rounder");
+    });
+  });
