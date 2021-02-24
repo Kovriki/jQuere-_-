@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style media="screen">
+    .cont1 {
+      width: 150px;
+      height: 100px;
+      border: 1px solid;
+      position: relative;
+    }
+    .cont2 {
+      /* width: 100%; */
+      width: 0;
+      height: 100%;
+      background-color: black;
+      position: absolut;
+      animation-timing-function: linear;
+      transition: 1s;
+
+
+    }
+
+    </style>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+        $(".cont1").click(function(){
+
+    setTimeout(function(){
+                  $(".cont2").css({"width":"100%"})
+            }, 400);
+              });
+      })
+    </script>
+  </head>
+  <body>
+    <div class="cont1">
+    <div class="cont2"></div>
+    </div>
+  </body>
+</html>
