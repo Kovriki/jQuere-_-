@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style media="screen">
+    #box {
+          width: 200px;
+          height: 200px;
+          left: calc(50% - 100px);
+          top: 100px;
+          background-image: url('0.jpg');
+          background-size: 100% auto;
+          position: absolute;
+          display: block;
+        }
+    </style>
+    <script type="text/javascript">
+    $(document).mousemove(function(e) {
+        let body_size_x = $( window ).width();
+        let body_size_y = $( window ).height();
+        let half_body_size_x = parseInt(body_size_x / 2);
+        let half_body_size_y = parseInt(body_size_y / 2);
+        let left_dir = e.pageX;
+        let top_dir = e.pageY;
+
+        $('#body').html(half_body_size_x + ' + ' + half_body_size_y);
+        $('#top').html(top_dir);
+        $('#left').html(left_dir);
+         if (left_dir > half_body_size_x && top_dir > half_body_size_y) {
+           $('#box').css('background', 'red');
+         } else if (left_dir < half_body_size_x && top_dir < half_body_size_y) {
+           $('#box').css('background', 'orange');
+         } else if (left_dir > half_body_size_x && top_dir < half_body_size_y) {
+           $('#box').css('background', 'green');
+         } else if (left_dir < half_body_size_x && top_dir > half_body_size_y) {
+           $('#box').css('background', 'blue');
+         }
+
+      });
+    </script>
+  </head>
+  <body>
+    <div id="box"></div>
+<div id="body"></div>
+<div id="top"></div>
+<div id="left"></div>
+  </body>
+</html>
